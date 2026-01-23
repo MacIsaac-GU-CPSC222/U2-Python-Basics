@@ -1,7 +1,5 @@
 # math, datetime, random
 import math
-import datetime
-import random as rn
 
 # best practice: put your import statements at top of file
 
@@ -72,7 +70,10 @@ print(round(x,2))
 
 ###############################
 # USER INPUT
+# fav_num = int(input("What is your favorite num? "))
 
+# print(type(fav_num))
+# print(f"your fav num plus one is {fav_num + 1}")
 
 
 ###############################
@@ -80,7 +81,16 @@ print(round(x,2))
 # we have if elif (else if) else
     # python uses indentation to group statements together (like { })
 
-
+temp = 90
+humidity = 100
+if temp < 45:
+    print("it is cold out")
+elif temp > 80:
+    print("it is hot out")
+    if humidity > 70:
+        print("it is really bad out")
+else:
+    print("it is nice out")
 # you can nest if statements inside if statements
 # watch your indentation
 
@@ -91,29 +101,45 @@ print(round(x,2))
 # for item in sequence:
 #     body of statements to be repeated
 
+for num in [1,6,7]:
+    print(num)
+
+for letter in "hello":
+    print(letter)
 
 # we can make our own numeric sequences with range()
 # range(stop) [0, stop)
 # range(start, stop) [start, stop)
 # range(start, stop, step) step to specify a inc/dec other than 1
 
-
+for i in range(10,6, -1):
+    print(i, end=" ")
 
 
 # TASK: print the first 20 even numbers all on one line
 # separated by a comma and a space
 # 2, 4, ...., 40
-
-
-
+print()
+for i in range(2, 39, 2):
+    print(i, end= ", ")
+print(i+2)
 
 # while loop structure
 # while boolean condition is true:
 #    body (code we want repeated)
 #    progress towards boolean condition being false
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+
 # task: rewrite the even number loop using a while loop
-
-
+x = 2
+while x < 40:
+    print(x, end=", ")
+    x += 2
+print(x)
 
 # you can get an early exit from a loop with the break keyword
 # while True:
@@ -155,6 +181,8 @@ print(round(x,2))
 # RANDOM NUMBERS
 # often we need random numbers for simulating random events
 # or initializing the state of an algorithm
+
+
 
 # if you want the same random numbers each time you run
 # your program, "seed" the random number generator

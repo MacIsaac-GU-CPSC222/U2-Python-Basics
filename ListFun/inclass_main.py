@@ -101,6 +101,13 @@ bag_o_candies = 5 * ["twix", "snickers"]
 
 
 
+# built in list functions
+# len
+
+# sum
+
+# sort
+
 
 
 # lists and strings
