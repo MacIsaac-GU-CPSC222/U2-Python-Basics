@@ -142,3 +142,43 @@ print(repr(word))
 print(word.find("et"))
 print(word.find("k"))
 print(word.find("z"))
+
+
+# List comprehension
+# newlist = [expression for item in iterable if condition == True]
+
+numbers = [num for num in range(10)]
+print(numbers)
+
+candies_with_a = [candy for candy in candies if "a" in candy]
+
+print(candies_with_a)
+
+candies_with_a_bool = [True if "a" in candy else False for candy in candies]
+
+candies_with_a_bool_loop = []
+for candy in candies:
+    if "a" in candy:
+        candies_with_a_bool_loop.append(True)
+    else:
+        candies_with_a_bool_loop.append(False)
+
+print(candies_with_a_bool)
+
+# TASK 1:
+# What will be in newlist?
+# fruits = ['apple', 'banana', 'cherry']
+# newlist = [x for x in fruits if x == 'banana']
+
+# TASK 2:
+# numbers = [3, 7, 10, 15, 22, 30, 41, 50]
+# Using a single list comprehension, create a new list called even_squares that contains the square of each even number in numbers.
+
+
+
+
+
+# ans:
+numbers = [3, 7, 10, 15, 22, 30, 41, 50]
+even_squares = [number**2 for number in numbers if number % 2 == 0]
+print(even_squares)

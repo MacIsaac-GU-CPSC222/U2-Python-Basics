@@ -72,13 +72,20 @@ bag_o_candies = 5 * ["twix", "snickers"]
 
 
 # list slicing
+# list_name[start : end : step]
 
 
 # : is the slice operator. start index is inclusive
 # end index is exclusive
+# if you leave an argument empty, it will automatically fill in with:start (first element of the list), end (last element of the list), step (1)
 # if you ever need a copy of a list, you can simply use the : with no start or end indices
 
 
+# TASK:
+# Create a list with 10 numbers, then use slicing to print the following
+# First 3 elements
+# Last 3 elements
+# Every other element
 
 
 # list methods
@@ -190,3 +197,17 @@ bag_o_candies = 5 * ["twix", "snickers"]
 # print(word.find("et"))
 # print(word.find("k"))
 # print(word.find("z"))
+
+
+# List comprehension
+# newlist = [expression for item in iterable if condition == True]
+
+# TASK 1:
+# What will be in newlist?
+# fruits = ['apple', 'banana', 'cherry']
+# newlist = [x for x in fruits if x == 'banana']
+
+# TASK 2:
+# numbers = [3, 7, 10, 15, 22, 30, 41, 50]
+# Using a single list comprehension, create a new list called even_squares that contains the square of each even number in numbers.
+
