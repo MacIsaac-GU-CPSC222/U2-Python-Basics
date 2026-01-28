@@ -1,6 +1,7 @@
 # math, datetime, random
 import math
-
+from datetime import datetime
+import random
 # best practice: put your import statements at top of file
 
 # basic print
@@ -146,8 +147,10 @@ print(x)
 #     user_input = input("enter a word (\"stop\" to exit): ")
 #     if user_input == "stop":
 #         break
+#     if user_input == "next":
+#         continue
+#     print(user_input)
 # print("outside the loop")
-
 
 
 # FUNCTIONS
@@ -158,20 +161,47 @@ print(x)
 # def function_name(parameter list):
 #     body (only executes once you call the function)
 
+def my_msg(msg):
+    """
+    prints out msg with the date and time appended to the front
+    """
+    print(f"{datetime.now()}: {msg}")
 
-# print(f"{datetime.now()}: {msg_str}")
+my_msg("hello")
+my_msg("it is very cold today")
 
 
+def double(x):
+    double_val = x* 2
+    return double_val, x
+
+number = 3
+number, original_val = double(number)
+
+print(number)
+print(original_val)
 # returning multiple values
 
 
 
 # TASK: define/call a function that accepts a radius
 # and returns the area and circumference of a circle with that radius
-# formula: pi * r^2
+# formula:  area -> pi * r^2
+#           circumference -> 2*pi *r
 
+# math.pi
 
+def circle(radius):
+    """
+    returns the area and circumference of a circle based on radius
+    """
+    area = math.pi * (radius ** 2)
+    cir = 2 * radius * math.pi
+    return area, cir
 
+r = 3
+area, circumference = circle(r)
+print(area, circumference)
 
 # tuples are immutable (can't be changed)
 # lists are mutable (can be changed)
@@ -183,7 +213,11 @@ print(x)
 # or initializing the state of an algorithm
 
 
-
 # if you want the same random numbers each time you run
 # your program, "seed" the random number generator
+# random.seed(1)
 
+roll1 = random.randint(1,6)
+roll2 = random.randint(1,6)
+roll3 = random.randint(1,6)
+print(roll1,roll2, roll3)
