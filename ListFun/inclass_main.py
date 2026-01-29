@@ -174,6 +174,12 @@ list1[0] = 10000
 print(list1, list2, list3, list4)
 
 
+# other "hacks" to make a shallow copy
+# list5 = list1 + []
+# list6 = list1[:]
+# list5[0] = 298
+# list6[0] = 299
+# print(list1,list2,list3,list4,list5,list6)
 
 
 # a few more words about strings
@@ -182,15 +188,23 @@ print(list1, list2, list3, list4)
 # they have methods, like split() and join()
 # strip()
 
-# word = "                 a\tb\n\n  basketball\n   \nend"
-# print(word)
-# word = word.strip()
-# print(word)
+word = "                 a\tb\n\n  basketball\n   \nend\n"
 
-# # find()
-# print(word.find("et"))
-# print(word.find("k"))
-# print(word.find("z"))
+print(word)
+print("================")
+print(repr(word))
+print("================")
+word = word.strip()
+print(word)
+print("================")
+print(repr(word))
+print("================")
+
+print(len(word))
+# find()
+print(word.find("et"))
+print(word.find("k"))
+print(word.find("z"))
 
 
 # List comprehension

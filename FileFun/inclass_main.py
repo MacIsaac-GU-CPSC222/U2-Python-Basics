@@ -37,7 +37,7 @@ def convert_column_to_numeric(table, column_index):
     """
 
 
-# GS adding after class
+
 def pretty_print(header, table):
     """
     prints out the header and table such that it appears like a nice grid
