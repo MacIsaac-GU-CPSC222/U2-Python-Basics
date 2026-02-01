@@ -16,13 +16,18 @@ def load_lines_from_file(filename):
     opens the file <filename>, reads the file into a list, closes the file
     returns the list
     """
-    pass
+    r_file = open(filename, "r")
+    lines = r_file.readlines()
+    r_file.close()
+    return lines
+
 
 def clean_lines(lines):
     """
     removes ending whitespace from a list of lines
     """
-    pass
+    for ind in range(len(lines)):
+        lines[ind] = lines[ind].strip()
 
 def restructure_lines_into_table(lines):
     """

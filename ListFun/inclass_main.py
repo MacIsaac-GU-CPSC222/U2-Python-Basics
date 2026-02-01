@@ -175,11 +175,11 @@ print(list1, list2, list3, list4)
 
 
 # other "hacks" to make a shallow copy
-# list5 = list1 + []
-# list6 = list1[:]
-# list5[0] = 298
-# list6[0] = 299
-# print(list1,list2,list3,list4,list5,list6)
+list5 = list1 + []
+list6 = list1[:]
+list5[0] = 298
+list6[0] = 299
+print(list1,list2,list3,list4,list5,list6)
 
 
 # a few more words about strings
@@ -194,14 +194,15 @@ print(word)
 print("================")
 print(repr(word))
 print("================")
+
 word = word.strip()
 print(word)
 print("================")
 print(repr(word))
-print("================")
+# print("================")
 
 print(len(word))
-# find()
+# # find()
 print(word.find("et"))
 print(word.find("k"))
 print(word.find("z"))
@@ -209,12 +210,14 @@ print(word.find("z"))
 
 # List comprehension
 # newlist = [expression for item in iterable if condition == True]
-
 # TASK 1:
 # What will be in newlist?
-fruits = ['apple', 'banana', 'cherry']
+fruits = ['apple', 'banana', 'cherries']
 newlist = [fruit for fruit in fruits if fruit == 'banana']
-
+newlist = [len(fruit) for fruit in fruits if len(fruit)>5 ]
+print(newlist)
 # TASK 2:
-# numbers = [3, 7, 10, 15, 22, 30, 41, 50]
+numbers = [3, 7, 10, 15, 22, 30, 41, 50]
 # Using a single list comprehension, create a new list called even_squares that contains the square of each even number in numbers.
+even_squares = [number * number for number in numbers if number % 2 == 0]
+print(even_squares)
