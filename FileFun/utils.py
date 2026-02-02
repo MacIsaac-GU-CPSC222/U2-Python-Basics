@@ -34,16 +34,20 @@ def restructure_lines_into_table(lines):
     takes a list where each row is a line and converts it into a 2D list
     splits each line by a comma
     """
-    pass
+    table = []
+    for line in lines:
+        table.append(line.split(','))
+    return table
 
 def convert_column_to_numeric(table, column_index):
     """
     converts every item in a column of a table to a float
     """
-
-
+    for i in range(len(table)):
+        table[i][column_index] = float(table[i][column_index])
 
 def pretty_print(header, table):
     """
     prints out the header and table such that it appears like a nice grid
     """
+    pass
