@@ -221,3 +221,24 @@ roll1 = random.randint(1,6)
 roll2 = random.randint(1,6)
 roll3 = random.randint(1,6)
 print(roll1,roll2, roll3)
+
+"""
+Dice Rolling Simulator
+
+Write a program that simulates rolling two six-sided dice.
+
+1. Ask the user how many times they want to roll.
+2. For each roll:
+   Generate two random numbers from 1 to 6.
+   Print both dice and their total.
+3. Count how many times doubles are rolled.
+4. At the end, print the total number of doubles and the percentage of rolls that were doubles.
+
+If you finish early:
+
+* Put the dice roll into a function that returns both dice values.
+* Count how many times the total is 7.
+* Count how many times you roll snake eyes (1 + 1) or double sixes (6 + 6).
+* Ask the user if they want to run another simulation.
+
+"""
