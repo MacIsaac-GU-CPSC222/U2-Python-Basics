@@ -24,22 +24,15 @@
 # variables store values
 # common types: int, float, str, bool
 
-temperature = 72
-city = "Spokane"
-is_raining = False
 
-print(temperature)
-print(type(temperature))
 
 
 # = is assignment
 # Python evaluates the RIGHT side first,
 # then stores the result on the LEFT
 
-temperature = temperature + 3
-temperature += 2   # same as temperature = temperature + 2
 
-print(temperature)
+
 
 # common numeric operators:
 # /  floating-point division
@@ -47,10 +40,10 @@ print(temperature)
 # %  remainder
 # ** exponentiation
 
-print(10 / 3)
-print(10 // 3)
-print(10 % 3)
-print(2 ** 3)
+# print(10 / 3)
+# print(10 // 3)
+# print(10 % 3)
+# print(2 ** 3)
 
 
 # input() always returns a string
@@ -61,17 +54,16 @@ print(2 ** 3)
 
 
 # f-strings can format output
-pi = 3.14159
-print(f"{pi:.2f}")
+
 
 
 # PREDICT:
 # without running the code, determine the final value of rainfall
 
-rainfall = 1.0
-rainfall += 0.5
-rainfall *= 2
-rainfall -= 1
+# rainfall = 1.0
+# rainfall += 0.5
+# rainfall *= 2
+# rainfall -= 1
 
 # print(rainfall)
 
@@ -82,10 +74,6 @@ rainfall -= 1
 
 # comparison expressions evaluate to True or False
 
-temperature = 72
-
-print(temperature > 80)
-print(temperature == 72)
 
 # common comparison operators:
 # >   greater than
@@ -103,25 +91,12 @@ print(temperature == 72)
 # if statements use Boolean expressions
 # to decide whether code should run
 
-temperature = 85
 
-if temperature >= 80:
-    print("hot day")
-# else:
-#     print("not a hot day")
 # use else when there are two possibilities
 
 
 # use elif when there are several possibilities
 
-temperature = 65
-
-if temperature < 50:
-    print("cold")
-elif temperature < 80:
-    print("mild")
-else:
-    print("hot")
 
 
 # conditions can also be combined:
@@ -131,7 +106,7 @@ else:
 
 # PREDICT:
 # what is printed?
-
+"""
 temperature = 80 
 if temperature >= 70 and temperature < 90:
     print("comfortable") 
@@ -139,7 +114,7 @@ elif temperature < 50 or temperature > 100:
     print("extreme") 
 else:
     print("moderate")
-
+"""
 # TASK:
 # modify the code below so that it prints:
 #
@@ -158,9 +133,6 @@ temperature = 55
 # for loops repeat code
 # the loop variable receives one value from a sequence
 # during each iteration
-
-for day in range(5):
-    print(day)
 
 
 # range() creates a sequence of integers
@@ -198,12 +170,6 @@ for day in range(5):
 # 2. what happens during one iteration?
 # 3. what changes before the next iteration?
 
-temperature = 60
-
-for day in range(1, 6):
-    temperature += 2
-    print("day:", day, "temperature:", temperature)
-
 
 # TRACE:
 # complete the table before running the code
@@ -227,26 +193,13 @@ for day in range(1, 6):
 
 # an accumulator stores a running result
 
-total = 0
-
-for number in range(1, 5):
-    total += number
-
-print(total)
 
 # another common pattern is counting how often
 # something happens
 
-hot_days = 0
-
-for day in range(1, 6):
-    temperature = 60 + day * 5
-
-    if temperature >= 80:
-        hot_days += 1
 
 # Predict outcome
-print("hot days:", hot_days)
+# print("hot days:", hot_days)
 
 
 # IMPORTANT:
@@ -268,19 +221,11 @@ print("hot days:", hot_days)
 
 # defining a function does NOT execute its body
 
-def f_to_c(temperature):
-    celsius = (temperature - 32) * 5 / 9
-    return celsius
-
 
 
 # the function executes when we CALL it
 # how to consider return values: 
 # result = <whatever the function returns>
-result = f_to_c(72)
-
-print(result)
-
 
 # TERMINOLOGY:
 #
