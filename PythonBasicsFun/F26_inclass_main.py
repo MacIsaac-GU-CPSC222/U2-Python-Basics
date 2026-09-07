@@ -159,9 +159,9 @@ temperature = 55
 
 # range(1, 5)
 
-# range(2, 8, 2)
+# range(2, 14, 3)
 
-# range(5, 0, -1)
+# range(7, 2, -1)
 
 
 # when tracing a loop, ask:
@@ -169,6 +169,12 @@ temperature = 55
 # 1. what values will the loop variable receive?
 # 2. what happens during one iteration?
 # 3. what changes before the next iteration?
+
+temperature = 60
+
+for day in range(1, 6):
+    temperature += 2
+    print("day:", day, "temperature:", temperature)
 
 
 # TRACE:

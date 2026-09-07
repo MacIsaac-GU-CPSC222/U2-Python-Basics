@@ -62,7 +62,7 @@ print(2 ** 3)
 
 # f-strings can format output
 pi = 3.14159
-print(f"{pi:.2f}")
+print(f"pi rounded off to two digits is {pi:.2f}")
 
 
 # PREDICT:
@@ -187,9 +187,9 @@ for day in range(5):
 
 # range(1, 5)
 
-# range(2, 8, 2)
+# range(2, 14, 3)
 
-# range(5, 0, -1)
+# range(7, 2, -1)
 
 
 # when tracing a loop, ask:
