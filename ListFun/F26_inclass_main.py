@@ -20,6 +20,7 @@
 # Python indexes start at 0
 
 # index:        0   1   2   3   4 
+#               -5  -4  -3  -2  -1
 temperatures = [72, 81, 77, 54, 23]
 
 
@@ -44,15 +45,15 @@ temperatures = [72, 81, 77, 54, 23]
 
 # len() tells us how many values are in a list
 
-
-
+print(len(temperatures))
+print(temperatures[-2])
 # a list of length 5 has indexes:
 # 0, 1, 2, 4, 5
 
 # the last valid index is:
 # len(list) - 1
 
-
+print(temperatures[len(temperatures)-1])
 # PREDICT:
 values = [10, 20, 30, 40]
 
@@ -72,10 +73,10 @@ values = [10, 20, 30, 40]
 
 # PREDICT:
 values = [10, 20, 30]
-values[1] = 99
+values[0] = 99
 
 # What prints?
-# print(values)
+print(values)
 
 
 # TASK:
@@ -87,19 +88,32 @@ values[1] = 99
 ###############################
 
 # lists can start empty
-
+temps = []
+print(temps)
+print(len(temps))
 
 # append() adds one value to the end
 # this is a method. A method is a special type of function that applies to a specific object
 # in this case, the object is the list "temperatures" and the method is "append"
 # you can recognize that it is a method based on the . notation
 # ie <object>.<method>(<args>)
+temps.append(10)
+temps.append(20)
+temps.append(60)
+temps.insert(0, 30)
+print(temps)
+
 
 ###############################
 # LOOPING THROUGH LIST VALUES
 ###############################
 # when we need each VALUE,
 # loop directly through the list
+# [30, 10, 20, 60]
+for temp in temps:
+    print(temp)
+    temp = 50
+print(temps)
 
 
 # TRACE:
@@ -110,12 +124,25 @@ values[1] = 99
 ###############################
 # ACCUMULATION WITH LISTS
 ###############################
-
-# calculating average of values in a list
-
 # TASK:
+# calculating average of values in a list
 # Count how many temperatures are at least 80
+temps.append(90)
+temps.append(79)
+temps.append(102)
+print(temps)
+total = 0
+vals_above_80 = 0
 
+for temp in temps:
+    total += temp
+
+    if temp > 80:
+        vals_above_80 += 1
+
+avg = total/len(temps)
+print(f"average temp was {avg:.2f} degrees")
+print(f"vals above 80: {vals_above_80}")
 
 ###############################
 # VALUES VS INDEXES
@@ -123,6 +150,12 @@ values[1] = 99
 
 # usually, if we just need the values:
 # loop directly through the list
+
+for i in range(len(temps)):
+    print(f"{i} -> {temps[i]}")
+    temps[i] += 1
+
+print(temps)
 
 # sometimes we actually need the POSITION
 # for example: you need the index to modify the value in the list

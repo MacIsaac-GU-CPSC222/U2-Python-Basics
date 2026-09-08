@@ -20,6 +20,7 @@
 # Python indexes start at 0
 
 # index:        0   1   2   3   4 
+#               -5  -4  -3  -2  -1
 temperatures = [72, 81, 77, 54, 23]
 
 print(temperatures[0])
@@ -268,10 +269,10 @@ print(max(temperatures))
 # if a function changes the list itself,
 # the original list is changed too
 
-def replace_negatives(values):
+def replace_negatives(values, replacement_val = 0):
     for i in range(len(values)):
         if values[i] < 0:
-            values[i] = 0
+            values[i] = replacement_val
 
 
 temperatures = [72, -5, 81, -2, 77]
@@ -351,7 +352,7 @@ print(cleaned_temperatures)
 # Write a program that:
 #
 # 1. creates an empty list
-# 2. asks the user for 5 temperatures
+# 2. asks the user for 5 temperatures (use a loop)
 # 3. stores each temperature using append()
 # 4. prints all stored temperatures
 # 5. calculates the average temperature

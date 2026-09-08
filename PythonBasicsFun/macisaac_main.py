@@ -29,7 +29,7 @@ city = "Spokane"
 is_raining = False
 
 print(temperature)
-print(type(temperature))
+print(type(city))
 
 
 # = is assignment
@@ -37,7 +37,9 @@ print(type(temperature))
 # then stores the result on the LEFT
 
 temperature = temperature + 3
-temperature += 2   # same as temperature = temperature + 2
+
+temperature = 50
+temperature *= 2   # same as temperature = temperature + 2
 
 print(temperature)
 
@@ -55,14 +57,16 @@ print(2 ** 3)
 
 # input() always returns a string
 # convert the result when you need a number
-
-# temperature = float(input("Enter the temperature: "))
-# print(temperature)
+temp_input = input("Enter the temperature: ")
+print(type(temp_input))
+# print(temp_input + 3)
+temperature = float(temp_input)
+print(temperature+3)
 
 
 # f-strings can format output
 pi = 3.14159
-print(f"pi rounded off to two digits is {pi:.2f}")
+print(f"pi rounded off to two digits is {pi:.3f}")
 
 
 # PREDICT:
@@ -132,7 +136,8 @@ else:
 # PREDICT:
 # what is printed?
 
-temperature = 80 
+temperature = 62
+
 if temperature >= 70 and temperature < 90:
     print("comfortable") 
 elif temperature < 50 or temperature > 100:
@@ -268,7 +273,14 @@ print("hot days:", hot_days)
 
 # defining a function does NOT execute its body
 
-def f_to_c(temperature):
+def f_to_c(temperature: float)-> float:
+    """
+        convert fahrenheit to celsius
+
+        temperature: numeric representing a fahrenheit value
+
+        returns: numeric representing the celsius equivalent
+    """
     celsius = (temperature - 32) * 5 / 9
     return celsius
 
@@ -277,9 +289,9 @@ def f_to_c(temperature):
 # the function executes when we CALL it
 # how to consider return values: 
 # result = <whatever the function returns>
-result = f_to_c(72)
+result = f_to_c("str")
 
-print(result)
+print(f"result: {result}")
 
 
 # TERMINOLOGY:
