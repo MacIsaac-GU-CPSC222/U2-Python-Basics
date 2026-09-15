@@ -110,9 +110,9 @@ print(temps)
 # when we need each VALUE,
 # loop directly through the list
 # [30, 10, 20, 60]
-for temp in temps:
-    print(temp)
-    temp = 50
+for x in temps:
+    print(x)
+    x = 50
 print(temps)
 
 
@@ -184,7 +184,16 @@ values = [100, -10, 23, 10, -5]
 
 # a function can accept an entire list
 
+def average(values):
+    total = 0
 
+    for value in values:
+        total += value
+    
+    return total / len(values)
+
+temperatures = [72, 81, 77, 85]
+print(average(temperatures))
 
 # TASK:
 # Write a function that counts
@@ -198,7 +207,9 @@ values = [100, -10, 23, 10, -5]
 # Python already provides some common
 # operations for numeric lists
 
-
+print(sum(temperatures))
+print(min(temperatures))
+print(max(temperatures))
 
 ###############################
 # MODIFYING LISTS IN FUNCTIONS
@@ -208,7 +219,16 @@ values = [100, -10, 23, 10, -5]
 # if a function changes the list itself,
 # the original list is changed too
 
-
+def replace_negatives(values, replacement_val = 0):
+    values_copy = values.copy() # "shallow" copy
+    for i in range(len(values_copy)):
+        if values_copy[i] < 0:
+            values_copy[i] = replacement_val
+    return values_copy
+temperatures = [72, -5, 81, -2, 77]
+copy = replace_negatives(temperatures, 10)
+print(temperatures)
+print(copy)
 
 # PREDICT:
 #
@@ -223,6 +243,12 @@ values = [100, -10, 23, 10, -5]
 ###############################
 
 # assignment does NOT make a new list
+list1 = [1,2,3]
+list2 = list1.copy()
+list2[0] = 100
+print(list1)
+print(list2)
+
 
 
 # list1 and list2 refer to the same list
@@ -241,9 +267,9 @@ list2[0] *= 7
 list3 = list1.copy()
 list3[0] = 5
 
-# print(list1)
-# print(list2)
-# print(list3)
+print(list1)
+print(list2)
+print(list3)
 
 
 # TASK:
@@ -283,19 +309,13 @@ weather_data = [
     ["Seattle", 68, 0.2],
     ["Portland", 75, 0.0]
 ]
-
-
-
+print(weather_data)
 # one index gives us an entire row
-
-
-
-
+print(weather_data[2])
 # two indexes give us one value
-#
 # first index  -> row
 # second index -> position within that row
-
+print(weather_data[2][1])
 
 # PREDICT:
 #
@@ -318,12 +338,15 @@ weather_data = [
 
 # during each iteration,
 # row is one of the inner lists
-
+for row in weather_data:
+    print(row)
+    for item in row:
+        print(item, end="  ")
+    print()
 
 
 # TASK:
 # Print only the city names
-
 
 ###############################
 # ANALYZING A COLUMN
@@ -345,8 +368,8 @@ weather_data = [
 
 # we can modify one value using
 # a row index and a column index
-
-
+weather_data[1][1] = 73
+print(weather_data)
 
 # PREDICT:
 #
@@ -357,14 +380,23 @@ weather_data = [
 
 # TASK:
 # Increase Portland's temperature by 5 degrees
-
+# Increase its precipitation by 2.0
+weather_data[2][1] += 5
+weather_data[2][2] += 2
+print(weather_data[2])
 
 ###############################
 # BUILDING A 2D LIST
 ###############################
 
 # we can also build a table one row at a time
+weather_data = []
 
+row = ["Spokane", 72, 0.0]
+weather_data.append(row)
+row = ["Seattle", 68, 0.2]
+weather_data.append(row)
+print(weather_data)
 
 # TASK:
 # Add a row for Portland:
