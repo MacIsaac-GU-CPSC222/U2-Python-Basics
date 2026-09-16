@@ -356,10 +356,10 @@ for row in weather_data:
 # the temperature column
 
 
-
-
 # TASK:
 # Find the highest temperature in the table
+
+
 
 
 ###############################
